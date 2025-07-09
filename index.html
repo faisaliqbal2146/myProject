@@ -1,0 +1,184 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My porfolio</title>
+    <style>
+      body{
+        margin: 0;
+        background-color:#333;
+        font-family: arial,san-serif;
+        color: aqua;
+      }
+       .hero img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom:20px ;
+        border: 4px solid crimson;
+       }
+       .hero h1{
+        font-size: 36px;
+        margin: 0;
+
+       }
+       .hero button{
+        background-color: rgb(231, 231, 240);
+        color: rgb(10, 3, 3);
+        padding: 10px 20px;
+        cursor: poniter;
+        border-radius: 5px;
+        font-size: 16px;
+       }
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: bisque;
+    text-align: center;
+}
+.projects{
+    padding: 20px 40px;
+    background-color: #333;
+    text-align: center;
+    color:black;
+
+ }
+ .projects h2{
+    font-size: 30px;
+    color:#333
+    margin-bottom:30px;     
+}
+.project-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+.project-card{
+    width:250px;
+    background-color: #a39696;
+    border-radius: 8px;
+    padding: 20px;
+}
+.prject-card h3{
+    color: #007b66;
+    margin-bottom: 10px;
+}
+.contact{
+    padding: 40px 20px;
+    background-color:#333;
+    text-align: center;
+}
+.contact h2{
+    color: #f3eaea;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[type="submit"]
+{
+    background-color: rgb(158, 151, 151);
+    color: #0c0c0c;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media(max-width:768px){
+    .hero h1{
+        font-size: 26px;
+    }
+    .hero p{
+        font-size: 16px;
+
+    }
+    .project-list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card{
+        width: 90%;
+
+    }
+    input,textarea{
+        font-size: 14px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section  class="hero">
+    <img src="C:\Users\Faisal\Desktop\test\WhatsApp Image 2025-04-25 at 10.20.26 PM (1).jpeg" alt="profile"/>
+    <h1>AOA i am your developer</h1>
+    <p> i am a front end developer of having skills of html,css,javascript</p>
+    <button onclick="alert('contact section')">HIRE ME</button>
+    </section>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Todo App</h3>
+                <p>Simple Todo list using Html css and javascript</p>
+            </div>
+            <div class="project-card">
+                <h3>Calculator</h3>
+                <p> Basic calculator made with javaScript</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Form validation</h3>
+                        <p>html form with input checks using JS</p>
+                    </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>contact me</h2>
+        <form onsubmit="return handleSubmit(event)">
+            <input type="text" id="name" placeholder="your name" required/>
+            <input type="email" id="email" placeholder="your email" required/>
+            <textarea id="message" placeholder="your message" required></textarea>
+<button type="submit">send message</button>
+
+            
+        </form>
+    </section>
+<script>
+    function handleSubmit(event){
+        event.preventDefault();
+        const name=document.getElementById("name").value.trim();
+        const email=document.getElementById("email").value.trim();
+        const message=document.getElementById("message").value.trim();
+        if(name&&email&&message){
+            alert('message sent successfully');
+        }
+        else{
+            alert('please fill all fields!');
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>
